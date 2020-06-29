@@ -1,0 +1,15 @@
+{
+    "Talks": [
+        {
+            "talkAuthors": "Jorge Ortega",
+            "talkTitle": "Como pasar el SAA01",
+            "talkDesc": "En esta charla, jorge nos dara tips & trips de como pasar el certified solution arquitect associate"
+        },
+        {
+            "talkAuthors": "Nicki Stone",
+            "talkTitle": "Swift on Lambda",
+            "talkDesc": "Nicki will guide us thru using swift combine with aws lambda",
+            "talkDate": "07/22/2020"
+        }
+    ]
+}
