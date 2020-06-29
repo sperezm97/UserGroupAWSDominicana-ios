@@ -13,12 +13,6 @@ struct ResponseData: Decodable {
     var Talks: [Talk]
 }
 
-struct Redesview: View {
-    var body: some View {
-        Text("Hi")
-    }
-}
-
 
 struct HomeView: View {
     
@@ -36,7 +30,7 @@ struct HomeView: View {
                     .padding()
                 Image(systemName: "list.dash")
             }
-            Redesview()
+            SocialNetworkView()
                 .tabItem{
                     Text("Redes").padding()
                     Image(systemName: "info")

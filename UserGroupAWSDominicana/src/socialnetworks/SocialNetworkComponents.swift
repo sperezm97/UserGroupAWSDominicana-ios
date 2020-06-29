@@ -10,9 +10,18 @@ import Foundation
 import SwiftUI
 
 struct SocialNetworkItem: View {
+    var text: String = ""
+    var link: String = ""
+
     var body: some View {
-        HStack {
-            Text("Facebook")
-        }
+        Button(self.text){
+            UIApplication.shared.open(URL(string: self.link)!)
+        }.padding()
+    }
+}
+
+struct SocialNetworkItem_Preview: PreviewProvider {
+    static var previews: some View {
+        SocialNetworkItem()
     }
 }
