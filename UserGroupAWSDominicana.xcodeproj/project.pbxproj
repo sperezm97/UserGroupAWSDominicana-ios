@@ -16,7 +16,7 @@
 		9540F41024A982CA00CF70E1 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F40F24A982CA00CF70E1 /* router.swift */; };
 		9540F41824A9869100CF70E1 /* LoginComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F41724A9869100CF70E1 /* LoginComponents.swift */; };
 		9546BFC024AA69930018E6C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */; };
-		9546BFC324AA71AD0018E6C0 /* SocialNetworkComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC224AA71AD0018E6C0 /* SocialNetworkComponents.swift */; };
+		9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */; };
 		9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */; };
 		954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BBB1E24AA56FD00B4AD6D /* TalkListView.swift */; };
 		95D07C9224A9877D00087193 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9124A9877D00087193 /* LoginView.swift */; };
@@ -41,7 +41,7 @@
 		9540F40F24A982CA00CF70E1 /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
 		9540F41724A9869100CF70E1 /* LoginComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponents.swift; sourceTree = "<group>"; };
 		9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9546BFC224AA71AD0018E6C0 /* SocialNetworkComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworkComponents.swift; sourceTree = "<group>"; };
+		9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksComponents.swift; sourceTree = "<group>"; };
 		9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksView.swift; sourceTree = "<group>"; };
 		954BBB1E24AA56FD00B4AD6D /* TalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListView.swift; sourceTree = "<group>"; };
 		95D07C9124A9877D00087193 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		9546BFC124AA71860018E6C0 /* socialnetworks */ = {
 			isa = PBXGroup;
 			children = (
-				9546BFC224AA71AD0018E6C0 /* SocialNetworkComponents.swift */,
+				9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */,
 				9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */,
 			);
 			path = socialnetworks;
@@ -240,7 +240,7 @@
 				9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */,
 				951C502B24A92DC40010573D /* SceneDelegate.swift in Sources */,
 				95D07C9E24A9A92D00087193 /* TalkDetailView.swift in Sources */,
-				9546BFC324AA71AD0018E6C0 /* SocialNetworkComponents.swift in Sources */,
+				9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */,
 				95D07C9224A9877D00087193 /* LoginView.swift in Sources */,
 				951C502D24A92DC40010573D /* ContentView.swift in Sources */,
 				954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */,
