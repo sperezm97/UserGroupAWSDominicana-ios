@@ -11,7 +11,8 @@ import SwiftUI
 
 struct UserImage: View {
     var body: some View {
-        return Image("userImage")
+
+        return Image(systemName: "person.crop.circle")
             .resizable()
             .aspectRatio(
                 UIImage(named: "userImage")!.size,
@@ -21,5 +22,11 @@ struct UserImage: View {
             .clipped()
             .clipShape(Circle())
             .padding(.bottom, 10)
+    }
+}
+
+struct GlobalComponents_Previews: PreviewProvider {
+    static var previews: some View {
+        UserImage()
     }
 }

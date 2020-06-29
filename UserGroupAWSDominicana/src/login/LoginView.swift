@@ -12,12 +12,15 @@ import SwiftUI
 struct LoginView: View {
     
     @State var password: String = ""
+    @State var firstTime: Bool = true
     @ObservedObject var viewRouter: ViewRouter
 
     var body: some View {
         VStack {
             WelcomeHeader()
-            UserImage()
+            if !firstTime {
+                UserImage()
+            }
             UserTextBox(username: "", hoverText: "username")
             UserPasswordBox(password: "", hoverText: "password")
 
