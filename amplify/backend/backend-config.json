@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"usergroupdomincanac10bec45": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

@@ -25,8 +25,24 @@ struct UserImage: View {
     }
 }
 
+struct WelcomeHeader: View {
+    var text: String?
+
+    var body: some View {
+        return Text(text ?? "Welcome")
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+            .padding(.bottom, 10)
+    }
+}
+
+
 struct GlobalComponents_Previews: PreviewProvider {
     static var previews: some View {
-        UserImage()
+        VStack{
+            UserImage()
+            WelcomeHeader()
+            WelcomeHeader(text: "Test")
+        }
     }
 }

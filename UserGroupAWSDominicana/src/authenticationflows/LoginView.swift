@@ -24,10 +24,10 @@ struct LoginView: View {
             UserTextBox(username: "", hoverText: "username")
             UserPasswordBox(password: "", hoverText: "password")
 
-            Button(action: {self.viewRouter.currentPage = "Login"}) {
-                LoginButtonContent()
+            Button(action: login) {
+                AuthenticationButtonContent(text: "login")
             }
-            Button(action: {self.viewRouter.currentPage = "Home"}) {
+            Button(action: {self.viewRouter.currentPage = "Signup"}) {
                 Text("Sign Up")
                     .foregroundColor(.gray)
             }

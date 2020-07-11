@@ -21,6 +21,9 @@ struct MainView: View {
             if viewRouter.currentPage == "Login" {
                 LoginView(viewRouter: viewRouter)
             }
+            else if viewRouter.currentPage == "Signup" {
+                SignupView(viewRouter: viewRouter)
+            }
             else {
                 HomeView(viewRouter: viewRouter)
             }

@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-usergroupdomincana-dev-153330-authRole",
+            "UnauthRoleArn": "arn:aws:iam::014173173173:role/amplify-usergroupdomincana-dev-153330-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::014173173173:role/amplify-usergroupdomincana-dev-153330-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-usergroupdomincana-dev-153330-deployment",
+            "UnauthRoleName": "amplify-usergroupdomincana-dev-153330-unauthRole",
+            "StackName": "amplify-usergroupdomincana-dev-153330",
+            "StackId": "arn:aws:cloudformation:us-east-1:014173173173:stack/amplify-usergroupdomincana-dev-153330/680e2f20-c3ad-11ea-a51e-0e8a1126433d",
+            "AmplifyAppId": "d8uo67a8grimf"
+        },
+        "categories": {
+            "auth": {
+                "usergroupdomincanac10bec45": {}
+            }
+        }
+    }
+}

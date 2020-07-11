@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,11 @@
 		951C502F24A92DC70010573D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951C502E24A92DC70010573D /* Assets.xcassets */; };
 		951C503224A92DC70010573D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951C503124A92DC70010573D /* Preview Assets.xcassets */; };
 		951C503524A92DC70010573D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951C503324A92DC70010573D /* LaunchScreen.storyboard */; };
+		952ABB1C24BA513E00E8FF6B /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 952ABB1A24BA513E00E8FF6B /* amplifyconfiguration.json */; };
+		952ABB1D24BA513E00E8FF6B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */; };
+		952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952ABB1F24BA595000E8FF6B /* SignupView.swift */; };
 		9540F41024A982CA00CF70E1 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F40F24A982CA00CF70E1 /* router.swift */; };
-		9540F41824A9869100CF70E1 /* LoginComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F41724A9869100CF70E1 /* LoginComponents.swift */; };
+		9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */; };
 		9546BFC024AA69930018E6C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */; };
 		9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */; };
 		9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */; };
@@ -27,9 +30,11 @@
 		95D07C9E24A9A92D00087193 /* TalkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9D24A9A92D00087193 /* TalkDetailView.swift */; };
 		95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9F24A9A9EE00087193 /* TalkModels.swift */; };
 		95D07CA224A9AE2600087193 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 95D07CA124A9AE2600087193 /* data.json */; };
+		ACB8B9AFD44F7451963799A3 /* Pods_UserGroupAWSDominicana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D745445F696F467BCDCE249 /* Pods_UserGroupAWSDominicana.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D745445F696F467BCDCE249 /* Pods_UserGroupAWSDominicana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserGroupAWSDominicana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		951C502524A92DC40010573D /* UserGroupAWSDominicana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserGroupAWSDominicana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		951C502824A92DC40010573D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		951C502A24A92DC40010573D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +43,11 @@
 		951C503124A92DC70010573D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		951C503424A92DC70010573D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		951C503624A92DC70010573D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952ABB1A24BA513E00E8FF6B /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		952ABB1F24BA595000E8FF6B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		9540F40F24A982CA00CF70E1 /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
-		9540F41724A9869100CF70E1 /* LoginComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginComponents.swift; sourceTree = "<group>"; };
+		9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationComponents.swift; sourceTree = "<group>"; };
 		9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksComponents.swift; sourceTree = "<group>"; };
 		9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksView.swift; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		95D07C9D24A9A92D00087193 /* TalkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailView.swift; sourceTree = "<group>"; };
 		95D07C9F24A9A9EE00087193 /* TalkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkModels.swift; sourceTree = "<group>"; };
 		95D07CA124A9AE2600087193 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E23602DB59DC423271388CA8 /* Pods-UserGroupAWSDominicana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserGroupAWSDominicana.debug.xcconfig"; path = "Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana.debug.xcconfig"; sourceTree = "<group>"; };
+		E44FA2BA637B6AF7AD17151A /* Pods-UserGroupAWSDominicana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserGroupAWSDominicana.release.xcconfig"; path = "Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,18 +69,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB8B9AFD44F7451963799A3 /* Pods_UserGroupAWSDominicana.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F6E70C78FA863AE6C66507A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E23602DB59DC423271388CA8 /* Pods-UserGroupAWSDominicana.debug.xcconfig */,
+				E44FA2BA637B6AF7AD17151A /* Pods-UserGroupAWSDominicana.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		951C501C24A92DC40010573D = {
 			isa = PBXGroup;
 			children = (
 				9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */,
 				951C502724A92DC40010573D /* UserGroupAWSDominicana */,
 				951C502624A92DC40010573D /* Products */,
+				0F6E70C78FA863AE6C66507A /* Pods */,
+				D6B8CDDB7C8705E911111781 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				9540F41524A985E700CF70E1 /* src */,
+				952ABB1A24BA513E00E8FF6B /* amplifyconfiguration.json */,
+				952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */,
 				951C502824A92DC40010573D /* AppDelegate.swift */,
 				951C502A24A92DC40010573D /* SceneDelegate.swift */,
 				951C502C24A92DC40010573D /* ContentView.swift */,
@@ -112,19 +136,20 @@
 				9546BFC124AA71860018E6C0 /* socialnetworks */,
 				95D07C9A24A9A8F900087193 /* talks */,
 				95D07C9324A98CB500087193 /* home */,
-				9540F41624A985EF00CF70E1 /* login */,
+				9540F41624A985EF00CF70E1 /* authenticationflows */,
 				95D07C9824A98EAF00087193 /* GlobalComponents.swift */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		9540F41624A985EF00CF70E1 /* login */ = {
+		9540F41624A985EF00CF70E1 /* authenticationflows */ = {
 			isa = PBXGroup;
 			children = (
-				9540F41724A9869100CF70E1 /* LoginComponents.swift */,
+				952ABB1F24BA595000E8FF6B /* SignupView.swift */,
+				9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */,
 				95D07C9124A9877D00087193 /* LoginView.swift */,
 			);
-			path = login;
+			path = authenticationflows;
 			sourceTree = "<group>";
 		};
 		9546BFC124AA71860018E6C0 /* socialnetworks */ = {
@@ -157,6 +182,14 @@
 			path = talks;
 			sourceTree = "<group>";
 		};
+		D6B8CDDB7C8705E911111781 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D745445F696F467BCDCE249 /* Pods_UserGroupAWSDominicana.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 951C504F24A92DC70010573D /* Build configuration list for PBXNativeTarget "UserGroupAWSDominicana" */;
 			buildPhases = (
+				68B7615B4FA1A74EDAAA856B /* [CP] Check Pods Manifest.lock */,
 				951C502124A92DC40010573D /* Sources */,
 				951C502224A92DC40010573D /* Frameworks */,
 				951C502324A92DC40010573D /* Resources */,
+				D6B041608E28BFA8C8CEFA71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				951C503524A92DC70010573D /* LaunchScreen.storyboard in Resources */,
+				952ABB1D24BA513E00E8FF6B /* awsconfiguration.json in Resources */,
+				952ABB1C24BA513E00E8FF6B /* amplifyconfiguration.json in Resources */,
 				95D07CA224A9AE2600087193 /* data.json in Resources */,
 				951C503224A92DC70010573D /* Preview Assets.xcassets in Resources */,
 				9546BFC024AA69930018E6C0 /* Default-568h@2x.png in Resources */,
@@ -224,6 +261,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68B7615B4FA1A74EDAAA856B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserGroupAWSDominicana-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B041608E28BFA8C8CEFA71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		951C502124A92DC40010573D /* Sources */ = {
@@ -234,7 +313,7 @@
 				95D07C9524A98D7E00087193 /* HomeComponents.swift in Sources */,
 				9540F41024A982CA00CF70E1 /* router.swift in Sources */,
 				95D07C9C24A9A90C00087193 /* TalkComponents.swift in Sources */,
-				9540F41824A9869100CF70E1 /* LoginComponents.swift in Sources */,
+				9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */,
 				95D07C9924A98EAF00087193 /* GlobalComponents.swift in Sources */,
 				951C502924A92DC40010573D /* AppDelegate.swift in Sources */,
 				9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */,
@@ -242,6 +321,7 @@
 				95D07C9E24A9A92D00087193 /* TalkDetailView.swift in Sources */,
 				9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */,
 				95D07C9224A9877D00087193 /* LoginView.swift in Sources */,
+				952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */,
 				951C502D24A92DC40010573D /* ContentView.swift in Sources */,
 				954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */,
 				95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */,
@@ -380,6 +460,7 @@
 		};
 		951C505024A92DC70010573D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23602DB59DC423271388CA8 /* Pods-UserGroupAWSDominicana.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +481,7 @@
 		};
 		951C505124A92DC70010573D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44FA2BA637B6AF7AD17151A /* Pods-UserGroupAWSDominicana.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
