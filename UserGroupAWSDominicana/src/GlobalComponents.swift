@@ -36,6 +36,9 @@ struct WelcomeHeader: View {
     }
 }
 
+class Observable: ObservableObject {
+    @Published var value: String = ""
+}
 
 struct GlobalComponents_Previews: PreviewProvider {
     static var previews: some View {

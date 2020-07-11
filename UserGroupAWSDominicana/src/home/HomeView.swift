@@ -20,11 +20,11 @@ struct HomeView: View {
 
     var body: some View {
         TabView {
-            NavigationView{
+            NavigationView {
                 TalkListView(Talks: loadJson(filename: "data")!)
                     .navigationBarTitle("Talks")
                     .listStyle(GroupedListStyle())
-            }.tabItem{
+            }.tabItem {
                 Text("Talks")
                     .font(.system(size: 20))
                     .padding()

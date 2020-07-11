@@ -21,8 +21,8 @@ struct LoginView: View {
             if !firstTime {
                 UserImage()
             }
-            UserTextBox(username: "", hoverText: "username")
-            UserPasswordBox(password: "", hoverText: "password")
+//            UserTextBox(username: "", hoverText: "username")
+//            UserPasswordBox(password: "", hoverText: "password")
 
             Button(action: login) {
                 AuthenticationButtonContent(text: "login")

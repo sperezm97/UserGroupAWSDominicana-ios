@@ -10,6 +10,8 @@ import Foundation
 import SwiftUI
 import Amplify
 
+// Signin
+
 func login() {
     _ = Amplify.Auth.fetchAuthSession { result in
         switch result {
@@ -33,13 +35,51 @@ func signIn(username: String, password: String) {
     }
 }
 
+// -----------------------------
+// Signup logic
+// -----------------------------
+//username: username, password: username, email: username
+func signUp(username: String, password: String, email: String){
+    let userAttributes = [AuthUserAttribute(.email, value: email)]
+    let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
+    
+    _ = Amplify.Auth.signUp(username: username, password: password, options: options) { result in
+        switch result {
+        case .success(let signUpResult):
+            if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
+                print("Delivery details \(String(describing: deliveryDetails))")
+            }
+        case .failure(let error):
+            print("An error ocurred with registering the user \(error)")
+        }   
+    }
+}
+
+func confirmSignUp(for username: String, with confirmationCode: String) {
+    _ = Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode) { result in
+        switch result {
+        case .success(_):
+            print("Confirm signUp succeded")
+        case .failure(let error):
+            print("An error ocurred while registering a user \(error)")
+            
+        }
+    }
+}
+
+// -----------------------------
+// UI components
+// -----------------------------
 
 struct UserTextBox: View {
-    @State var username: String = ""
+    // TODO: Disable auto capitalization
+    // TODO: Add a parameter to control auto capitalization
+    // TODO: Add option to disable the field
+    @ObservedObject var username = Observable()
     var hoverText: String = ""
     
     var body: some View {
-        return TextField(hoverText, text: $username)
+        return TextField(hoverText, text: $username.value)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
@@ -49,11 +89,11 @@ struct UserTextBox: View {
 
 struct UserPasswordBox: View {
     
-    @State var password: String = ""
+    @ObservedObject var password = Observable()
     var hoverText: String = ""
     
     var body: some View {
-        return SecureField(hoverText, text: $password)
+        return SecureField(hoverText, text: $password.value)
         .padding()
         .background(lightGreyColor)
         .cornerRadius(5.0)
@@ -72,36 +112,5 @@ struct AuthenticationButtonContent: View {
             .background(Color.blue)
             .cornerRadius(10.0)
             .padding()
-    }
-}
-
-// SignUp logic
-
-func signUp(username: String, password: String, email: String) {
-    let userAttributes = [AuthUserAttribute(.email, value: email)]
-    let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
-    
-    _ = Amplify.Auth.signUp(username: username, password: password, options: options) { result in
-        switch result {
-        case .success(let signUpResult):
-            if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
-                print("Delivery details \(String(describing: deliveryDetails))")
-            }
-        case .failure(let error):
-            print("An error ocurred with registering the user \(error)")
-        }
-        
-    }
-}
-
-func confirmSignUp(for username: String, with confirmationCode: String) {
-    _ = Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode) { result in
-        switch result {
-        case .success(_):
-            print("Confirm signUp succeded")
-        case .failure(let error):
-            print("An error ocurred while registering a user \(error)")
-            
-        }
     }
 }

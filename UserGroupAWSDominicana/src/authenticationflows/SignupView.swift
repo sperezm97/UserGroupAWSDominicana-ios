@@ -11,21 +11,33 @@ import SwiftUI
 
 
 struct SignupView: View {
+    @State var toVerify: Bool = false
     @ObservedObject var viewRouter: ViewRouter
+    @ObservedObject var email = Observable()
+    @ObservedObject var username = Observable()
+    @ObservedObject var password = Observable()
+    
     var body: some View {
         VStack {
-            WelcomeHeader(text: "SignUp")
-            UserTextBox(username:"", hoverText: "email")
-            UserTextBox(username: "", hoverText: "username")
-            UserPasswordBox(password: "", hoverText: "password")
 
-            Button(action: login) {
-                AuthenticationButtonContent(text: "signup")
+            if toVerify == false {
+                WelcomeHeader(text: "SignUp")
+                UserTextBox(username: self.email, hoverText: "email")
+                UserTextBox(username: self.username, hoverText: "username")
+                UserPasswordBox(password: self.password, hoverText: "password")
+                Button(action: {
+                    signUp(username: self.username.value, password: self.password.value, email: self.email.value)
+                    self.toVerify = true
+                }){
+                    AuthenticationButtonContent(text: "signup")
+                }
+                Button(action: {self.viewRouter.currentPage = "Login"}) {
+                     Text("Back to login!")
+                        .foregroundColor(.gray)
+                }
+            } else {
+                SignupConfirmationView(user: self.username, viewRouter: self.viewRouter)
             }
-            Button(action: {self.viewRouter.currentPage = "Login"}) {
-                Text("login")
-                   .foregroundColor(.gray)
-           }
         }
         .padding()
     }
