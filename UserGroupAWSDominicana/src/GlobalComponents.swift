@@ -36,8 +36,12 @@ struct WelcomeHeader: View {
     }
 }
 
-class Observable: ObservableObject {
+class ObservableString: ObservableObject {
     @Published var value: String = ""
+}
+
+class ObservableBool: ObservableObject {
+    @Published var value: Bool = false
 }
 
 struct GlobalComponents_Previews: PreviewProvider {

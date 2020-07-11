@@ -17,6 +17,7 @@
 		952ABB1D24BA513E00E8FF6B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */; };
 		952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952ABB1F24BA595000E8FF6B /* SignupView.swift */; };
 		953147C624BA798F0016B033 /* SignupConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147C524BA798F0016B033 /* SignupConfirmationView.swift */; };
+		953147C824BA83E80016B033 /* GatherUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147C724BA83E80016B033 /* GatherUserDataView.swift */; };
 		9540F41024A982CA00CF70E1 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F40F24A982CA00CF70E1 /* router.swift */; };
 		9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */; };
 		9546BFC024AA69930018E6C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */; };
@@ -48,6 +49,7 @@
 		952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		952ABB1F24BA595000E8FF6B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		953147C524BA798F0016B033 /* SignupConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConfirmationView.swift; sourceTree = "<group>"; };
+		953147C724BA83E80016B033 /* GatherUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherUserDataView.swift; sourceTree = "<group>"; };
 		9540F40F24A982CA00CF70E1 /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
 		9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationComponents.swift; sourceTree = "<group>"; };
 		9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */,
 				95D07C9124A9877D00087193 /* LoginView.swift */,
 				953147C524BA798F0016B033 /* SignupConfirmationView.swift */,
+				953147C724BA83E80016B033 /* GatherUserDataView.swift */,
 			);
 			path = authenticationflows;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				95D07C9C24A9A90C00087193 /* TalkComponents.swift in Sources */,
 				9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */,
 				95D07C9924A98EAF00087193 /* GlobalComponents.swift in Sources */,
+				953147C824BA83E80016B033 /* GatherUserDataView.swift in Sources */,
 				951C502924A92DC40010573D /* AppDelegate.swift in Sources */,
 				9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */,
 				951C502B24A92DC40010573D /* SceneDelegate.swift in Sources */,

@@ -10,8 +10,8 @@ import Foundation
 import SwiftUI
 
 struct SignupConfirmationView: View {
-    @ObservedObject var user = Observable()
-    @ObservedObject var code = Observable()
+    @ObservedObject var user = ObservableString()
+    @ObservedObject var code = ObservableString()
     @ObservedObject var viewRouter: ViewRouter
     var body: some View {
         VStack{
