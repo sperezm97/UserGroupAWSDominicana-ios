@@ -12,28 +12,69 @@ import Amplify
 
 // Signin
 
-func login() {
-    _ = Amplify.Auth.fetchAuthSession { result in
-        switch result {
-        case .success(let session):
-            print("Is user signed in - \(session.isSignedIn)")
-        case .failure(let err):
-            print("Fetch session failed with error \(err)")
-        }
+func isUserLoged() -> Bool {
+    let group = DispatchGroup()
+    var sessionExist = false
+
+    group.enter()
+
+    DispatchQueue.global().async {
         
+        _ = Amplify.Auth.fetchAuthSession { result in
+            switch result {
+            case .success(let data):
+                sessionExist = data.isSignedIn
+                group.leave()
+
+            case .failure(let err):
+                print("Fetch session failed with error \(err)")
+                group.leave()
+            }
+        }
+    }
+    group.wait()
+    return sessionExist
+}
+
+func signIn(username: String, password: String) -> Bool {
+
+    let group = DispatchGroup()
+    var logedIn = false
+    group.enter()
+
+    DispatchQueue.global().async {
+       _ = Amplify.Auth.signIn(username: username, password: password) { result in
+           switch result {
+           case .success(_):
+               print("Sign in succeeded")
+               logedIn = true
+               group.leave()
+           case .failure(let error):
+               print("Sign in failed \(error)")
+               group.leave()
+           }
+       }
+    }
+
+    group.wait()
+
+    return logedIn
+}
+
+func signOut() {
+    // TODO: Refactor to return boolean if the logout worked
+    if(isUserLoged()){
+        _ = Amplify.Auth.signOut() { result in
+            switch result {
+            case .success:
+                print("Successfully signed out")
+            case .failure(let error):
+                print("Sign out failed with error \(error)")
+            }
+        }
     }
 }
 
-func signIn(username: String, password: String) {
-    _ = Amplify.Auth.signIn(username: username, password: password) { result in
-        switch result {
-        case .success(_):
-            print("Sign in succeded")
-        case .failure(let error):
-            print("Sign in failed \(error)")
-        }
-    }
-}
 
 // -----------------------------
 // Signup logic

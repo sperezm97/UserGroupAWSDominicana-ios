@@ -15,7 +15,8 @@ struct TalkListView: View {
         
         return List {
             ForEach(Talks, id: \.id) {result in
-                VStack{
+                VStack {
+                    // TODO: DRY; Modeify the boolean on the if and assign it after
                     if (strToDate(talkItem: result) ?? Date() > Date()){
                        NavigationLink(destination: TalkDetailsView(talkItem: result)){
                                TalkItem(talkItem: result)

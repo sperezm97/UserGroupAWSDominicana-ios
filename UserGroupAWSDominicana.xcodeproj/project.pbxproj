@@ -18,6 +18,8 @@
 		952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952ABB1F24BA595000E8FF6B /* SignupView.swift */; };
 		953147C624BA798F0016B033 /* SignupConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147C524BA798F0016B033 /* SignupConfirmationView.swift */; };
 		953147C824BA83E80016B033 /* GatherUserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147C724BA83E80016B033 /* GatherUserDataView.swift */; };
+		953147CB24BAA3AA0016B033 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147CA24BAA3AA0016B033 /* SettingsView.swift */; };
+		953147CD24BAA5010016B033 /* SettingsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953147CC24BAA5010016B033 /* SettingsComponents.swift */; };
 		9540F41024A982CA00CF70E1 /* router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F40F24A982CA00CF70E1 /* router.swift */; };
 		9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */; };
 		9546BFC024AA69930018E6C0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */; };
@@ -50,6 +52,8 @@
 		952ABB1F24BA595000E8FF6B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		953147C524BA798F0016B033 /* SignupConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupConfirmationView.swift; sourceTree = "<group>"; };
 		953147C724BA83E80016B033 /* GatherUserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatherUserDataView.swift; sourceTree = "<group>"; };
+		953147CA24BAA3AA0016B033 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		953147CC24BAA5010016B033 /* SettingsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsComponents.swift; sourceTree = "<group>"; };
 		9540F40F24A982CA00CF70E1 /* router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = router.swift; sourceTree = "<group>"; };
 		9540F41724A9869100CF70E1 /* AuthenticationComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationComponents.swift; sourceTree = "<group>"; };
 		9546BFBF24AA69930018E6C0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -134,9 +138,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		953147C924BAA38C0016B033 /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				953147CA24BAA3AA0016B033 /* SettingsView.swift */,
+				953147CC24BAA5010016B033 /* SettingsComponents.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
 		9540F41524A985E700CF70E1 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				953147C924BAA38C0016B033 /* settings */,
 				9546BFC124AA71860018E6C0 /* socialnetworks */,
 				95D07C9A24A9A8F900087193 /* talks */,
 				95D07C9324A98CB500087193 /* home */,
@@ -317,6 +331,7 @@
 			files = (
 				95D07C9724A98D9300087193 /* HomeView.swift in Sources */,
 				95D07C9524A98D7E00087193 /* HomeComponents.swift in Sources */,
+				953147CD24BAA5010016B033 /* SettingsComponents.swift in Sources */,
 				9540F41024A982CA00CF70E1 /* router.swift in Sources */,
 				95D07C9C24A9A90C00087193 /* TalkComponents.swift in Sources */,
 				9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */,
@@ -333,6 +348,7 @@
 				954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */,
 				953147C624BA798F0016B033 /* SignupConfirmationView.swift in Sources */,
 				95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */,
+				953147CB24BAA3AA0016B033 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

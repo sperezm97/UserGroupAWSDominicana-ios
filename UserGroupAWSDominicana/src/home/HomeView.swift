@@ -15,13 +15,14 @@ struct ResponseData: Decodable {
 
 
 struct HomeView: View {
-    
+
     @ObservedObject var viewRouter: ViewRouter
 
     var body: some View {
+
         TabView {
             NavigationView {
-                TalkListView(Talks: loadJson(filename: "data")!)
+               TalkListView(Talks: loadJson(filename: "data")!)
                     .navigationBarTitle("Talks")
                     .listStyle(GroupedListStyle())
             }.tabItem {
@@ -32,8 +33,13 @@ struct HomeView: View {
             }
             SocialNetworkView()
                 .tabItem{
-                    Text("Redes").padding()
+                    Text("Social Networks").padding()
                     Image(systemName: "info")
+            }
+            SettingsView(viewRouter: self.viewRouter)
+            .tabItem{
+                Text("Settings").padding()
+                Image(systemName: "wrench")
             }
         }
     }

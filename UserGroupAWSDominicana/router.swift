@@ -9,9 +9,16 @@
 import Combine
 import Foundation
 
+func initialRoute() -> String {
+    return isUserLoged() ? "Home" : "Login"
+
+}
+
+
 class ViewRouter: ObservableObject {
     let objectWillChange = PassthroughSubject<ViewRouter, Never>()
-    var currentPage: String = "Login" {
+
+    var currentPage: String = initialRoute() {
         didSet {
             objectWillChange.send(self)
         }

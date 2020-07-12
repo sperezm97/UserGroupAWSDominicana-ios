@@ -11,9 +11,11 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var password: String = ""
+    
     @State var firstTime: Bool = true
     @ObservedObject var viewRouter: ViewRouter
+    @ObservedObject var username = ObservableString()
+    @ObservedObject var password = ObservableString()
 
     var body: some View {
         VStack {
@@ -21,10 +23,19 @@ struct LoginView: View {
             if !firstTime {
                 UserImage()
             }
-//            UserTextBox(username: "", hoverText: "username")
-//            UserPasswordBox(password: "", hoverText: "password")
+            UserTextBox(username: self.username, hoverText: "username")
+            UserPasswordBox(password: self.password, hoverText: "password")
 
-            Button(action: login) {
+            Button(action: {
+                let wasSignIn = signIn(
+                    username: self.username.value,
+                    password: self.password.value
+                )
+                if wasSignIn {
+                    self.viewRouter.currentPage = "Home"
+                }
+
+            }) {
                 AuthenticationButtonContent(text: "login")
             }
             Button(action: {self.viewRouter.currentPage = "Signup"}) {

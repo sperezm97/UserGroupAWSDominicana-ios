@@ -18,6 +18,7 @@ struct MainView: View {
     
     var body: some View {
         VStack {
+//
             if viewRouter.currentPage == "Login" {
                 LoginView(viewRouter: viewRouter)
             }
