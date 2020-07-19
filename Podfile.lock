@@ -90,6 +90,7 @@ PODS:
 DEPENDENCIES:
   - Amplify
   - AmplifyPlugins
+  - AmplifyPlugins/AWSAPIPlugin
   - AWSMobileClient
   - AWSPluginsCore
   - AWSPredictionsPlugin
@@ -144,6 +145,6 @@ SPEC CHECKSUMS:
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: b5ab1a710689d36cd57380d2ccfd3ea1c72fab07
+PODFILE CHECKSUM: a5b030bd11d7820f23cf31b188fc20840ac9e283
 
 COCOAPODS: 1.9.3

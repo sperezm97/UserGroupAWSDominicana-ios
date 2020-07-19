@@ -12,5 +12,6 @@ target 'UserGroupAWSDominicana' do
   pod 'AWSPredictionsPlugin'
   pod 'CoreMLPredictionsPlugin'
   pod 'AWSMobileClient'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
 
 end

@@ -1,0 +1,13 @@
+type Talk @model {
+  id: ID!
+  name: String!
+  description: String
+  date: String!
+  speaker: Speaker
+}
+
+type Speaker {
+  id: ID!
+  name: String!
+}
+

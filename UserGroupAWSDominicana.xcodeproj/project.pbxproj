@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		951C502924A92DC40010573D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C502824A92DC40010573D /* AppDelegate.swift */; };
 		951C502B24A92DC40010573D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C502A24A92DC40010573D /* SceneDelegate.swift */; };
 		951C502D24A92DC40010573D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C502C24A92DC40010573D /* ContentView.swift */; };
 		951C502F24A92DC70010573D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 951C502E24A92DC70010573D /* Assets.xcassets */; };
@@ -26,6 +25,11 @@
 		9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */; };
 		9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */; };
 		954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954BBB1E24AA56FD00B4AD6D /* TalkListView.swift */; };
+		955E1B7C24C4F97100C7F7DF /* Talk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1B7824C4F97100C7F7DF /* Talk.swift */; };
+		955E1B7D24C4F97100C7F7DF /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1B7924C4F97100C7F7DF /* Speaker.swift */; };
+		955E1B7E24C4F97100C7F7DF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1B7A24C4F97100C7F7DF /* AmplifyModels.swift */; };
+		955E1B7F24C4F97100C7F7DF /* Talk+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1B7B24C4F97100C7F7DF /* Talk+Schema.swift */; };
+		95C43E0E24C4F4860095354D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C502824A92DC40010573D /* AppDelegate.swift */; };
 		95D07C9224A9877D00087193 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9124A9877D00087193 /* LoginView.swift */; };
 		95D07C9524A98D7E00087193 /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9424A98D7E00087193 /* HomeComponents.swift */; };
 		95D07C9724A98D9300087193 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9624A98D9300087193 /* HomeView.swift */; };
@@ -60,6 +64,10 @@
 		9546BFC224AA71AD0018E6C0 /* SocialNetworksComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksComponents.swift; sourceTree = "<group>"; };
 		9546BFC424AA86D10018E6C0 /* SocialNetworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetworksView.swift; sourceTree = "<group>"; };
 		954BBB1E24AA56FD00B4AD6D /* TalkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListView.swift; sourceTree = "<group>"; };
+		955E1B7824C4F97100C7F7DF /* Talk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talk.swift; sourceTree = "<group>"; };
+		955E1B7924C4F97100C7F7DF /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		955E1B7A24C4F97100C7F7DF /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplifyModels.swift; sourceTree = "<group>"; };
+		955E1B7B24C4F97100C7F7DF /* Talk+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Talk+Schema.swift"; sourceTree = "<group>"; };
 		95D07C9124A9877D00087193 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		95D07C9424A98D7E00087193 /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		95D07C9624A98D9300087193 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -150,6 +158,7 @@
 		9540F41524A985E700CF70E1 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				955E1B6924C4F74D00C7F7DF /* models */,
 				953147C924BAA38C0016B033 /* settings */,
 				9546BFC124AA71860018E6C0 /* socialnetworks */,
 				95D07C9A24A9A8F900087193 /* talks */,
@@ -180,6 +189,18 @@
 			);
 			path = socialnetworks;
 			sourceTree = "<group>";
+		};
+		955E1B6924C4F74D00C7F7DF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				955E1B7A24C4F97100C7F7DF /* AmplifyModels.swift */,
+				955E1B7924C4F97100C7F7DF /* Speaker.swift */,
+				955E1B7824C4F97100C7F7DF /* Talk.swift */,
+				955E1B7B24C4F97100C7F7DF /* Talk+Schema.swift */,
+			);
+			name = models;
+			path = amplify/generated/models;
+			sourceTree = SOURCE_ROOT;
 		};
 		95D07C9324A98CB500087193 /* home */ = {
 			isa = PBXGroup;
@@ -331,21 +352,25 @@
 			files = (
 				95D07C9724A98D9300087193 /* HomeView.swift in Sources */,
 				95D07C9524A98D7E00087193 /* HomeComponents.swift in Sources */,
+				955E1B7E24C4F97100C7F7DF /* AmplifyModels.swift in Sources */,
 				953147CD24BAA5010016B033 /* SettingsComponents.swift in Sources */,
 				9540F41024A982CA00CF70E1 /* router.swift in Sources */,
 				95D07C9C24A9A90C00087193 /* TalkComponents.swift in Sources */,
+				955E1B7D24C4F97100C7F7DF /* Speaker.swift in Sources */,
 				9540F41824A9869100CF70E1 /* AuthenticationComponents.swift in Sources */,
 				95D07C9924A98EAF00087193 /* GlobalComponents.swift in Sources */,
 				953147C824BA83E80016B033 /* GatherUserDataView.swift in Sources */,
-				951C502924A92DC40010573D /* AppDelegate.swift in Sources */,
+				95C43E0E24C4F4860095354D /* AppDelegate.swift in Sources */,
 				9546BFC524AA86D10018E6C0 /* SocialNetworksView.swift in Sources */,
 				951C502B24A92DC40010573D /* SceneDelegate.swift in Sources */,
 				95D07C9E24A9A92D00087193 /* TalkDetailView.swift in Sources */,
 				9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */,
 				95D07C9224A9877D00087193 /* LoginView.swift in Sources */,
+				955E1B7C24C4F97100C7F7DF /* Talk.swift in Sources */,
 				952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */,
 				951C502D24A92DC40010573D /* ContentView.swift in Sources */,
 				954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */,
+				955E1B7F24C4F97100C7F7DF /* Talk+Schema.swift in Sources */,
 				953147C624BA798F0016B033 /* SignupConfirmationView.swift in Sources */,
 				95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */,
 				953147CB24BAA3AA0016B033 /* SettingsView.swift in Sources */,

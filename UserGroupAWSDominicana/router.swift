@@ -8,10 +8,10 @@
 
 import Combine
 import Foundation
+import Amplify
 
 func initialRoute() -> String {
     return isUserLoged() ? "Home" : "Login"
-
 }
 
 

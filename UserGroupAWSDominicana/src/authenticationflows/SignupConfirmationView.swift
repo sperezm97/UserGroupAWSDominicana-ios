@@ -10,9 +10,11 @@ import Foundation
 import SwiftUI
 
 struct SignupConfirmationView: View {
+
     @ObservedObject var user = ObservableString()
     @ObservedObject var code = ObservableString()
     @ObservedObject var viewRouter: ViewRouter
+
     var body: some View {
         VStack{
             WelcomeHeader(text: "Verification")

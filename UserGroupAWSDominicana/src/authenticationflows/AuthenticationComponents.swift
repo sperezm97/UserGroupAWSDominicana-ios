@@ -117,6 +117,7 @@ struct UserTextBox: View {
     // TODO: Add a parameter to control auto capitalization
     // TODO: Add option to disable the field
     @ObservedObject var username = ObservableString()
+    var capitalize: Bool = false
     var hoverText: String = ""
     
     var body: some View {
