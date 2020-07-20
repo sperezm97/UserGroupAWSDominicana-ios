@@ -30,6 +30,7 @@
 		955E1BCE24C5537100C7F7DF /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1BC924C5537100C7F7DF /* AmplifyModels.swift */; };
 		955E1BCF24C5537100C7F7DF /* Speaker+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1BCA24C5537100C7F7DF /* Speaker+Schema.swift */; };
 		955E1BD024C5537100C7F7DF /* Talk+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1BCB24C5537100C7F7DF /* Talk+Schema.swift */; };
+		955E1BD224C56BBD00C7F7DF /* TalkApplyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E1BD124C56BBD00C7F7DF /* TalkApplyView.swift */; };
 		95C43E0E24C4F4860095354D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951C502824A92DC40010573D /* AppDelegate.swift */; };
 		95D07C9224A9877D00087193 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9124A9877D00087193 /* LoginView.swift */; };
 		95D07C9524A98D7E00087193 /* HomeComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9424A98D7E00087193 /* HomeComponents.swift */; };
@@ -37,7 +38,6 @@
 		95D07C9924A98EAF00087193 /* GlobalComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9824A98EAF00087193 /* GlobalComponents.swift */; };
 		95D07C9C24A9A90C00087193 /* TalkComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9B24A9A90C00087193 /* TalkComponents.swift */; };
 		95D07C9E24A9A92D00087193 /* TalkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9D24A9A92D00087193 /* TalkDetailView.swift */; };
-		95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D07C9F24A9A9EE00087193 /* TalkModels.swift */; };
 		95D07CA224A9AE2600087193 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 95D07CA124A9AE2600087193 /* data.json */; };
 		ACB8B9AFD44F7451963799A3 /* Pods_UserGroupAWSDominicana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D745445F696F467BCDCE249 /* Pods_UserGroupAWSDominicana.framework */; };
 /* End PBXBuildFile section */
@@ -70,13 +70,13 @@
 		955E1BC924C5537100C7F7DF /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplifyModels.swift; sourceTree = "<group>"; };
 		955E1BCA24C5537100C7F7DF /* Speaker+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Speaker+Schema.swift"; sourceTree = "<group>"; };
 		955E1BCB24C5537100C7F7DF /* Talk+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Talk+Schema.swift"; sourceTree = "<group>"; };
+		955E1BD124C56BBD00C7F7DF /* TalkApplyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkApplyView.swift; sourceTree = "<group>"; };
 		95D07C9124A9877D00087193 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		95D07C9424A98D7E00087193 /* HomeComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeComponents.swift; sourceTree = "<group>"; };
 		95D07C9624A98D9300087193 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95D07C9824A98EAF00087193 /* GlobalComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalComponents.swift; sourceTree = "<group>"; };
 		95D07C9B24A9A90C00087193 /* TalkComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkComponents.swift; sourceTree = "<group>"; };
 		95D07C9D24A9A92D00087193 /* TalkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailView.swift; sourceTree = "<group>"; };
-		95D07C9F24A9A9EE00087193 /* TalkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkModels.swift; sourceTree = "<group>"; };
 		95D07CA124A9AE2600087193 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		E23602DB59DC423271388CA8 /* Pods-UserGroupAWSDominicana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserGroupAWSDominicana.debug.xcconfig"; path = "Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana.debug.xcconfig"; sourceTree = "<group>"; };
 		E44FA2BA637B6AF7AD17151A /* Pods-UserGroupAWSDominicana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserGroupAWSDominicana.release.xcconfig"; path = "Target Support Files/Pods-UserGroupAWSDominicana/Pods-UserGroupAWSDominicana.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +125,13 @@
 		951C502724A92DC40010573D /* UserGroupAWSDominicana */ = {
 			isa = PBXGroup;
 			children = (
-				9540F41524A985E700CF70E1 /* src */,
+				955E1BC624C5537100C7F7DF /* models */,
+				953147C924BAA38C0016B033 /* settings */,
+				9546BFC124AA71860018E6C0 /* socialnetworks */,
+				95D07C9A24A9A8F900087193 /* talks */,
+				95D07C9324A98CB500087193 /* home */,
+				9540F41624A985EF00CF70E1 /* authenticationflows */,
+				95D07C9824A98EAF00087193 /* GlobalComponents.swift */,
 				952ABB1A24BA513E00E8FF6B /* amplifyconfiguration.json */,
 				952ABB1B24BA513E00E8FF6B /* awsconfiguration.json */,
 				951C502824A92DC40010573D /* AppDelegate.swift */,
@@ -155,20 +161,6 @@
 				953147CC24BAA5010016B033 /* SettingsComponents.swift */,
 			);
 			path = settings;
-			sourceTree = "<group>";
-		};
-		9540F41524A985E700CF70E1 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				955E1BC624C5537100C7F7DF /* models */,
-				953147C924BAA38C0016B033 /* settings */,
-				9546BFC124AA71860018E6C0 /* socialnetworks */,
-				95D07C9A24A9A8F900087193 /* talks */,
-				95D07C9324A98CB500087193 /* home */,
-				9540F41624A985EF00CF70E1 /* authenticationflows */,
-				95D07C9824A98EAF00087193 /* GlobalComponents.swift */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		9540F41624A985EF00CF70E1 /* authenticationflows */ = {
@@ -220,8 +212,8 @@
 			children = (
 				95D07C9B24A9A90C00087193 /* TalkComponents.swift */,
 				95D07C9D24A9A92D00087193 /* TalkDetailView.swift */,
-				95D07C9F24A9A9EE00087193 /* TalkModels.swift */,
 				954BBB1E24AA56FD00B4AD6D /* TalkListView.swift */,
+				955E1BD124C56BBD00C7F7DF /* TalkApplyView.swift */,
 			);
 			path = talks;
 			sourceTree = "<group>";
@@ -370,13 +362,13 @@
 				955E1BCF24C5537100C7F7DF /* Speaker+Schema.swift in Sources */,
 				9546BFC324AA71AD0018E6C0 /* SocialNetworksComponents.swift in Sources */,
 				95D07C9224A9877D00087193 /* LoginView.swift in Sources */,
+				955E1BD224C56BBD00C7F7DF /* TalkApplyView.swift in Sources */,
 				955E1BD024C5537100C7F7DF /* Talk+Schema.swift in Sources */,
 				955E1BCC24C5537100C7F7DF /* Talk.swift in Sources */,
 				952ABB2024BA595000E8FF6B /* SignupView.swift in Sources */,
 				951C502D24A92DC40010573D /* ContentView.swift in Sources */,
 				954BBB1F24AA56FD00B4AD6D /* TalkListView.swift in Sources */,
 				953147C624BA798F0016B033 /* SignupConfirmationView.swift in Sources */,
-				95D07CA024A9A9EE00087193 /* TalkModels.swift in Sources */,
 				953147CB24BAA3AA0016B033 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
