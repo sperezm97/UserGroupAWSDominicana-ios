@@ -28,33 +28,3 @@ func loadJson(filename fileName: String) -> [Talk]? {
     }
     return nil
 }
-
-func listTalks() -> [Talk] {
-    let group = DispatchGroup()
-    var talks = [Talk]()
-    group.enter()
-    
-    DispatchQueue.global().async {
-        _ = Amplify.API.query(request: .list(Talk.self)) { event in
-            switch event {
-            case .success(let result):
-                switch result {
-                case .success(let talk):
-                    talks = talk
-                    group.leave()
-                case .failure(let error):
-                    print("fail \(error.errorDescription)")
-                    group.leave()
-                }
-            case .failure(let error):
-                print("Got failed event with error \(error)")
-                group.leave()
-            }
-            
-        }
-    }
-    group.wait()
-    
-    return talks
-}
-

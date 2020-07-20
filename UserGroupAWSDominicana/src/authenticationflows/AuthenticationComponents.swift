@@ -10,7 +10,9 @@ import Foundation
 import SwiftUI
 import Amplify
 
-// Signin
+// -----------------------------
+// Signin logic
+// -----------------------------
 
 func isUserLoged() -> Bool {
     let group = DispatchGroup()
@@ -23,17 +25,39 @@ func isUserLoged() -> Bool {
         _ = Amplify.Auth.fetchAuthSession { result in
             switch result {
             case .success(let data):
+                print("session information fetched")
                 sessionExist = data.isSignedIn
-                group.leave()
 
             case .failure(let err):
                 print("Fetch session failed with error \(err)")
-                group.leave()
             }
+            group.leave()
         }
     }
     group.wait()
+    
     return sessionExist
+}
+
+func fetchAttributes() {
+    
+    let group = DispatchGroup()
+
+    group.enter()
+
+    DispatchQueue.global().async {
+        
+
+    _ = Amplify.Auth.fetchUserAttributes() { result in
+            switch result {
+            case .success(let attributes):
+                print("User attributes - \(attributes)")
+            case .failure(let error):
+                print("Fetching user attributes failed with error \(error)")
+            }
+            group.leave()
+        }
+    }
 }
 
 func signIn(username: String, password: String) -> Bool {
@@ -75,11 +99,10 @@ func signOut() {
     }
 }
 
-
 // -----------------------------
 // Signup logic
 // -----------------------------
-//username: username, password: username, email: username
+
 func signUp(username: String, password: String, email: String){
     let userAttributes = [AuthUserAttribute(.email, value: email)]
     let options = AuthSignUpRequest.Options(userAttributes: userAttributes)

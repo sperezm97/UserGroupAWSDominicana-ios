@@ -15,12 +15,25 @@ struct SettingsView: View {
         VStack{
             List{
                 Button(action: {
+                    // TODO Change view to speaker
+                }){
+                    SettingsItem(text: "Manage Speakers", icon: "person.crop.circle.badge.plus")
+                }
+                Button(action: {
+                    // TODO Change view to manage talks view
+                }){
+                    SettingsItem(text: "Manage talks", icon: "pencil.and.outline")
+                }
+                Button(action: {
+                    // TODO Change view to apply view
+                }){
+                    SettingsItem(text: "Apply to speak!.. Soon", icon: "text.cursor")
+                }
+                Button(action: {
                     signOut()
                     self.viewRouter.currentPage = "Login"
                 }){
-                    HStack{
-                        SettingsItem(text: "LogOut", icon: "lock.slash")
-                    }
+                    SettingsItem(text: "LogOut", icon: "lock.slash")
                 }
                 
             }.listStyle(GroupedListStyle())

@@ -19,10 +19,11 @@ struct TalkDetailsView: View {
                 .fontWeight(.semibold)
                 .font(.system(size: 30))
                 .padding()
-
-            Text(talkItem.speaker.name)
+            if (talkItem.speaker != nil){
+                Text(talkItem.speaker!.name)
                 .fontWeight(.light)
                 .font(.system(size: 20))
+            }
 
             if talkItem.description != nil
             {

@@ -1,14 +1,14 @@
-type Talk @model {
+type Speaker @model {
+  id: ID!
+  name: String!
+  talks: [Talk] @connection(keyName: "bySpeaker", fields: ["id"])
+}
+
+type Talk @model @key(name: "bySpeaker", fields: ["speakerID"]){
   id: ID!
   name: String!
   description: String
   date: String!
-  speaker: Speaker! @connection(name: "SpeakerTalks")
+  speakerID: ID!
+  speaker: Speaker @connection(fields: ["speakerID"])
 }
-
-type Speaker @model{
-  id: ID!
-  name: String!
-  talks: [Talk] @connection(name: "SpeakerTalks")
-}
-

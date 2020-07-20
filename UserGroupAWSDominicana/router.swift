@@ -11,6 +11,7 @@ import Foundation
 import Amplify
 
 func initialRoute() -> String {
+//    print(listSpeakers())
     return isUserLoged() ? "Home" : "Login"
 }
 

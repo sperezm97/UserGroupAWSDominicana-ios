@@ -8,6 +8,26 @@
 
 import Foundation
 import SwiftUI
+import Amplify
+
+
+struct TalkItem: View {
+
+    var talkItem: Talk
+
+    var body: some View {
+        return HStack(alignment: .center){
+            Text(talkItem.name)
+                        .fontWeight(.semibold)
+                    Spacer()
+            if talkItem.speaker != nil {
+                Text(talkItem.speaker!.name)
+            }
+        }
+        .padding()
+        .foregroundColor(Color(.black))
+    }
+}
 
 func strToDate(talkItem: Talk) -> Date? {
     if talkItem.date != "" {
@@ -19,18 +39,122 @@ func strToDate(talkItem: Talk) -> Date? {
     return nil
 }
 
-struct TalkItem: View {
+// -----------------------------
+// Talks logic
+// -----------------------------
 
-    var talkItem: Talk
+func CreateTalk(name: String, description: String, date: String, speaker: Speaker) {
+    let talk = Talk(
+        name: name,
+        description: description,
+        date: date,
+        speaker: speaker
+    )
 
-    var body: some View {
-        return HStack(alignment: .center){
-            Text(talkItem.name)
-                        .fontWeight(.semibold)
-                    Spacer()
-            Text(talkItem.speaker.name)
+    _ = Amplify.API.mutate(request: .create(talk)) { event in
+        switch event {
+        case .success(let result):
+            switch result {
+            case .success(let talk):
+                print("talk created: \(talk)")
+            case .failure(let error):
+               print("\n Got failed result with \(error.errorDescription)")
+            }
+        case .failure(let error):
+            print("Got failed event with error \(error)")
         }
-        .padding()
-        .foregroundColor(Color(.black))
     }
 }
+
+func listTalks(name: String="") -> [Talk] {
+    print("Executing list talks")
+    let group = DispatchGroup()
+    var talks = [Talk]()
+    let talk = Talk.keys
+    group.enter()
+    var predicate = talk.name == name
+    if name == "" {
+        predicate = talk.name != name
+    }
+    
+    DispatchQueue.global().async {
+        _ = Amplify.API.query(request: .list(Talk.self, where: predicate)) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let data):
+                    talks = data
+                case .failure(let error):
+                    print("fail \(error.errorDescription)")
+                }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
+            }
+            group.leave()
+        }
+    }
+    group.wait()
+    return talks
+}
+
+// -----------------------------
+// Speaker logic
+// -----------------------------
+
+func CreateSpeaker(name: String) -> [Speaker] {
+    let group = DispatchGroup()
+    var speaker = [Speaker]()
+    group.enter()
+    DispatchQueue.global().async {
+        _ = Amplify.API.mutate(request: .create(Speaker(name: name))){ event in
+            switch(event) {
+            case .success(let result):
+                switch(result){
+                case .success(let data):
+                    speaker = [data]
+                case .failure(let error):
+                    print("failure: \(error)")
+                }
+                group.leave()
+            case .failure(let error):
+                print("failure \(error)")
+                group.leave()
+            }
+        }
+    }
+    group.wait()
+    return speaker
+}
+
+func listSpeakers(name: String="") -> [Speaker] {
+    let group = DispatchGroup()
+    let speaker = Speaker.keys
+    var predicate = speaker.name == name
+    if name == "" {
+        predicate = speaker.name != name
+    }
+    var speakers = [Speaker]()
+
+    group.enter()
+    
+    DispatchQueue.global().async {
+        _ = Amplify.API.query(request: .list(Speaker.self, where: predicate)) { event in
+            switch event {
+            case .success(let result):
+                switch result {
+                case .success(let data):
+                    speakers = data
+                case .failure(let error):
+                    print("fail \(error.errorDescription)")
+                }
+            case .failure(let error):
+                print("Got failed event with error \(error)")
+            }
+            group.leave()
+        }
+    }
+    group.wait()
+    
+    return speakers
+}
+
