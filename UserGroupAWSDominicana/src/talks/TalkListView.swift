@@ -36,12 +36,20 @@ struct TalkListView_Previews: PreviewProvider {
     static var previews: some View {
         TalkListView(Talks: [
             Talk(
-                talkTitle: "Swift on lambda",
-                talkAuthors: "Nicki Stone"
+                name: "Swift on lambda",
+                date: "01/01/01",
+                speaker: Speaker(
+                    id: "01",
+                    name: "Nicki Stone"
+                )
             ),
             Talk(
-                talkTitle: "Swift on lambda",
-                talkAuthors: "Nicki Stone"
+                name: "Swift on lambda",
+                date: "01/01/01",
+                speaker: Speaker(
+                    id: "01",
+                    name: "Nicki Stone"
+                )
             )
         ])
     }

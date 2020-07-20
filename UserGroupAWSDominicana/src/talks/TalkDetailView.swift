@@ -15,24 +15,24 @@ struct TalkDetailsView: View {
     
     var body: some View {
         return VStack{
-            Text(talkItem.talkTitle)
+            Text(talkItem.name)
                 .fontWeight(.semibold)
                 .font(.system(size: 30))
                 .padding()
 
-            Text(talkItem.talkAuthors)
+            Text(talkItem.speaker.name)
                 .fontWeight(.light)
                 .font(.system(size: 20))
 
-            if talkItem.talkDesc != nil
+            if talkItem.description != nil
             {
-                Text(talkItem.talkDesc!)
+                Text(talkItem.description!)
                     .padding(20.0)
                     .padding(.bottom, 40.0)
             }
-            if talkItem.talkDate != nil
+            if talkItem.date != ""
             {
-                Text(talkItem.talkDate!)
+                Text(talkItem.date)
                     .fontWeight(.bold)
                 Spacer()
             }
@@ -64,11 +64,22 @@ struct TalkDetailsView: View {
 struct TalkDetailView_Previews: PreviewProvider {
     static var previews: some View {
         TalkDetailsView(talkItem: Talk(
-            id: UUID(),
-            talkTitle: "Swift on lambda",
-            talkDesc: "On this talk Nicki Stone how awesome and powerful the combination between swift and lambda can be!",
-            talkAuthors: "Nicki Stone",
-            talkDate: "11/22/2021"
+            id: "01",
+            name: "test",
+            description: "test desk",
+            date: "01/01/01",
+            speaker: Speaker(
+                id: "01",
+                name: "Nicki Stone"
+            )
         ))
     }
 }
+
+//TalkDetailsView(talkItem: Talk(
+//    id: UUID(),
+//    talkTitle: "Swift on lambda",
+//    talkDesc: "On this talk Nicki Stone how awesome and powerful the combination between swift and lambda can be!",
+//    talkAuthors: "Nicki Stone",
+//    talkDate: "11/22/2021"
+//))

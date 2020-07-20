@@ -3,11 +3,12 @@ type Talk @model {
   name: String!
   description: String
   date: String!
-  speaker: Speaker
+  speaker: Speaker! @connection(name: "SpeakerTalks")
 }
 
-type Speaker {
+type Speaker @model{
   id: ID!
   name: String!
+  talks: [Talk] @connection(name: "SpeakerTalks")
 }
 

@@ -10,10 +10,10 @@ import Foundation
 import SwiftUI
 
 func strToDate(talkItem: Talk) -> Date? {
-    if talkItem.talkDate != nil {
+    if talkItem.date != "" {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
-        let date = dateFormatter.date(from: talkItem.talkDate!)
+        let date = dateFormatter.date(from: talkItem.date)
         return date
     }
     return nil
@@ -25,13 +25,12 @@ struct TalkItem: View {
 
     var body: some View {
         return HStack(alignment: .center){
-                    Text(talkItem.talkTitle)
+            Text(talkItem.name)
                         .fontWeight(.semibold)
                     Spacer()
-                    Text(talkItem.talkAuthors)
-                }
-                    .padding()
-                    .foregroundColor(Color(.black))
+            Text(talkItem.speaker.name)
+        }
+        .padding()
+        .foregroundColor(Color(.black))
     }
 }
-

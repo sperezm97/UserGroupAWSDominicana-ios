@@ -25,7 +25,7 @@ extension Talk {
       .field(talk.name, is: .required, ofType: .string),
       .field(talk.description, is: .optional, ofType: .string),
       .field(talk.date, is: .required, ofType: .string),
-      .field(talk.speaker, is: .optional, ofType: .customType(Speaker.self))
+      .belongsTo(talk.speaker, is: .required, ofType: Speaker.self, targetName: "talkSpeakerId")
     )
     }
 }

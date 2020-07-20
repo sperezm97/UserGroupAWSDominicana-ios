@@ -9,11 +9,6 @@
 import Foundation
 import SwiftUI
 
-struct ResponseData: Decodable {
-    var Talks: [Talk]
-}
-
-
 struct HomeView: View {
 
     @ObservedObject var viewRouter: ViewRouter
@@ -22,7 +17,7 @@ struct HomeView: View {
 
         TabView {
             NavigationView {
-               TalkListView(Talks: loadJson(filename: "data")!)
+               TalkListView(Talks: listTalks())
                     .navigationBarTitle("Talks")
                     .listStyle(GroupedListStyle())
             }.tabItem {
